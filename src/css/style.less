@@ -249,46 +249,79 @@ body, html {
 				a>img{
 					width: 180px;
 					height: 180px;
-				}			
+				}	
 				div.Portfolio-img-item-hover{
-					display: none;
-				}
-				
-				a:hover+div.Portfolio-img-item-hover{
+					position: absolute;
+					top:0;
+					// left:auto;
+					width: 100%;
+					height: 100%;
+					opacity: 0;
 					display: flex;
 					.flex(center,center);
-					flex-direction: column;
-					position: absolute;
-					top:0px;
-					left:auto;					
-					background: @contentColor;
-					opacity: 0.75;
-					width: 180px;
-					height: 180px;
-					border-radius: 50%;
-					cursor: pointer;				
-					h2{
-						.text(18px, normal, center,white,15px 0 0 0);			
-					}
-					p{
-						.text(14px, normal, center,white,10px 0 15px 0);	
-					}
-					div.Portfolio-img-item-hover-search{
-						width: 45px;
-						height: 45px;
+					div.Portfolio-img-item-hover-content{
+						display: flex;
+						.flex(center,center);
+						flex-direction: column;
+						position: absolute;
+						top:0px;
+						// left:auto;					
+						background: @contentColor;
+						opacity: 0.75;
+						width: 180px;
+						height: 180px;
 						border-radius: 50%;
-						background-color: #444444;
-						opacity: 0.61;
-						img{
-							width: 20px;
-							height: 20px;
-							position: absolute;
-							top:45px;
-							left:82px;
+						cursor: pointer;				
+						h2{
+							.text(18px, normal, center,white,15px 0 0 0);			
+						}
+						p{
+							.text(14px, normal, center,white,10px 0 15px 0);	
 						}
 					}
-					
 				}
+				div.Portfolio-img-item-hover:hover{
+					opacity: 0.75;
+				}		
+				// div.Portfolio-img-item-hover{
+				// 	display: none;
+				// }
+				
+				// a:hover+div.Portfolio-img-item-hover{
+				// 	display: flex;
+				// 	.flex(center,center);
+				// 	flex-direction: column;
+				// 	position: absolute;
+				// 	top:0px;
+				// 	left:auto;					
+				// 	background: @contentColor;
+				// 	opacity: 0.75;
+				// 	width: 180px;
+				// 	height: 180px;
+				// 	border-radius: 50%;
+				// 	cursor: pointer;				
+				// 	h2{
+				// 		.text(18px, normal, center,white,15px 0 0 0);			
+				// 	}
+				// 	p{
+				// 		.text(14px, normal, center,white,10px 0 15px 0);	
+				// 	}
+				// 	div.Portfolio-img-item-hover-search{
+				// 		width: 45px;
+				// 		height: 45px;
+				// 		border-radius: 50%;
+				// 		background-color: #444444;
+				// 		opacity: 0.61;
+				// 		img{
+				// 			width: 20px;
+				// 			height: 20px;
+				// 			position: absolute;
+				// 			top:45px;
+				// 			left:82px;
+				// 		}
+				// 	}
+					
+				// }
 			}
 			
 		}
