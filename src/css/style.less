@@ -253,6 +253,7 @@ body, html {
 				div.Portfolio-img-item-hover{
 					display: none;
 				}
+				
 				a:hover+div.Portfolio-img-item-hover{
 					display: flex;
 					.flex(center,center);
@@ -312,8 +313,17 @@ body, html {
 				margin-bottom: 75px;
 				position: relative;
 				background: white;
+		
 				a>img{width: 100%}
-				a:hover + div {
+				div.content_item-hover{
+					position:absolute;
+					top:0;
+					left:0;
+					height: 100%;
+					width:100%;
+					opacity: 0;
+					cursor:pointer;
+					div.content_item-hover-social {
 						display:flex;
 						.flex(space-around, center);
 						width: 180px;
@@ -321,12 +331,12 @@ body, html {
 						position: absolute;
 						top:100px;
 						left:20px;
-						background:@contentColor; 
-						cursor:pointer;
+						background:@contentColor; 	
+						}
 					}
-					div {														
-						display: none;			
-					}		
+					div.content_item-hover:hover{														
+						opacity: 1;			
+					}	
 					h2 {
 						.text(18px, normal, center,#444444,20px 0 5px);
 						padding-top: 0px;
